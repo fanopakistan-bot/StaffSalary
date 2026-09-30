@@ -66,6 +66,11 @@ ol.c li{margin:10px 0}
 .rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition-duration:.01s!important}.rv{opacity:1;transform:none}}
+.cta-wrap{text-align:center;margin:0 0 26px}
+.cta{display:inline-block;font:700 17px/1.4 'Jost','Noto Sans SC',system-ui,sans-serif;text-decoration:none;color:#1a0b45;background:linear-gradient(135deg,#c99a3f,#fff1c2 50%,#e0b25a);background-size:200% 100%;padding:14px 34px;border-radius:40px;border:1px solid var(--gold);box-shadow:0 8px 30px rgba(201,154,63,.45);animation:pulse 2.4s ease-in-out infinite;transition:transform .3s,background-position .6s}
+body.ar .cta,body.ur .cta{font-family:inherit}
+.cta:hover,.cta:focus-visible{transform:translateY(-3px) scale(1.03);background-position:100% 0;outline:none}
+@keyframes pulse{0%,100%{box-shadow:0 8px 30px rgba(201,154,63,.35)}50%{box-shadow:0 8px 42px rgba(243,217,146,.75)}}
 @media(max-width:420px){.langs{grid-template-columns:1fr}}
 </style>
 </head>
@@ -90,6 +95,7 @@ r:[['آزاد شناختیں','ایڈمن اور سپر ایڈمن دو الگ �
 ar:{n:'العربية',s:'Arabic',dir:'rtl',t:'سياسة المشرف / المشرف الأعلى',ah:'جدول إيرادات ورواتب المشرف',ai:'يحصل المشرف على <b>20% من الإيرادات التي تحققها الوكالات التي دعاها/أدارها شخصيًا</b>.',th:['إيرادات الوكالة الشهرية','راتب المشرف — 20%'],ih:'شروط الحصول على هوية المشرف',ii:'لا يحصل الفرد على <b>هوية/شارة المشرف</b> الرسمية إلا بعد استيفاء <b>الشرطين</b> معًا بنجاح:',c:['دعوة <b>10 وكالات نشطة</b> بنجاح','الوصول إلى <b>100M ألماس</b> في إجمالي إيرادات الوكالات الشهرية'],pn:'الوصول إلى 3,000M ألماس يؤهل المشرف للترقية إلى <b>مشرف أعلى</b>.',sh:'جدول إيرادات ورواتب المشرف الأعلى',si:'يحصل المشرف الأعلى على <b>25% من الإيرادات التي تحققها وكالاته الخاصة</b>.',th2:['إيرادات الوكالة الشهرية','راتب المشرف الأعلى — 25%'],rh:'القواعد الهيكلية المهمة',back:'تغيير اللغة',
 r:[['هويتان مستقلتان','المشرف والمشرف الأعلى هويتان منفصلتان، ولا يتبع أي منصب المنصب الآخر.'],['لا عمولة إضافية','<b>لا توجد عمولة إضافية أو عمولة خطوط سفلية أو عمولة ثانوية</b>. يكسب المشرف/المشرف الأعلى فقط من الوكالات المرتبطة مباشرة بحسابه.'],['إيرادات الوكالات المباشرة','تُحتسب فقط الإيرادات التي تحققها الوكالات التي دعاها/عُيّنت للمشرف أو المشرف الأعلى ضمن راتبه وأهداف ترقيته.'],['الترقية إلى مشرف أعلى','يمكن ترقية المشرف الحالي إلى مشرف أعلى بعد تحقيق <b>3,000M ألماس</b> من إيرادات الوكالات الشهرية المؤهلة، وذلك بعد تحقق الشركة.'],['هوية المشرف الأعلى','يحصل المشرف الأعلى على <b>هوية/شارة المشرف الأعلى الرسمية فور بلوغ الحد الأدنى للتأهيل وهو 3,000M ألماس</b>.'],['هيكل الإبلاغ','يجب على كل مشرف ومشرف أعلى الإبلاغ مباشرة إلى <b>المدير المعيّن</b> له في الأمور التشغيلية والأداء والامتثال والتقارير وتعليمات الشركة.'],['لا عمولة متبادلة','إذا قدّم المشرف A المشرف B، فلن يحصل المشرف A على <b>أي</b> نسبة من إيرادات المشرف B. وكذلك لا يحصل المشرف الأعلى على إيرادات من أي مشرف أو مشرف أعلى آخر.'],['التحقق من الإيرادات','جميع أرقام الإيرادات خاضعة لتحقق الشركة. لا تُحتسب ضمن الأهداف إلا معاملات الشحن/الإيرادات الصحيحة والمكتملة والمعتمدة.'],['الحساب الشهري','يُحسب الراتب/العمولة على أساس الإيرادات المؤهلة المحققة خلال فترة التسوية الشهرية المعنية.'],['الامتثال للسياسة','تحتفظ الشركة بالحق في تعليق هوية المشرف/المشرف الأعلى أو مراجعتها أو إلغائها في حالات الاحتيال أو التلاعب أو الحسابات المزيفة أو إساءة استخدام الشحن أو سوء سلوك الوكالة أو مخالفة سياسات الشركة.']]}
 };
+const CTA={en:'Click to Become an Admin',zh:'点击成为管理员',ur:'ایڈمن بننے کے لیے کلک کریں',ar:'انقر لتصبح مشرفاً'},CTA_URL='https://b0jd28rrdwt.feishu.cn/share/base/form/shrcn5aOEJw2G1H9VRJj5DYRt0b';
 const $=id=>document.getElementById(id);
 const ord=['en','zh','ur','ar'];
 const spl=(s)=>[...s].map((c,i)=>c===' '?' ':`<span style="animation-delay:${i*.04}s">${c}</span>`).join('');
@@ -102,6 +108,7 @@ function show(l){
  const d=L[l],u=U[l];k=0;
  document.documentElement.lang=l;document.documentElement.dir=d.dir;document.body.className=l;
  $('doc').innerHTML=
+ `<div class="cta-wrap"><a class="cta" href="${CTA_URL}" target="_blank" rel="noopener noreferrer">${CTA[l]}</a></div>`+
  `<div class="bar"><button id="bk">${d.back}</button><div class="sw">${ord.map(x=>`<button class="${x==l?'cur':''}" data-l="${x}">${L[x].n}</button>`).join('')}</div></div>`+
  `<header class="hd"><h1>${spl(d.t)}</h1><div class="crest"></div></header>`+
  rv(`<div class="card"><h2>${d.ah}</h2><p>${d.ai}</p>${tbl(d.th,A,u)}<h3>${d.ih}</h3><p>${d.ii}</p><ol class="c">${d.c.map((c,i)=>`<li><span class="n">${i+1}</span><span>${c}</span></li>`).join('')}</ol><p class="note">${d.pn}</p></div>`)+
